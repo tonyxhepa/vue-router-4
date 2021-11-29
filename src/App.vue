@@ -1,10 +1,9 @@
 <script setup>
+import NavbarVue from "./components/Navbar.vue";
 </script>
 
 <template>
-  <router-link to="/">Vuejs</router-link>
-  <router-link to="/laravel">Laravel</router-link>
-  <router-link to="/tailwind">Tailwind</router-link>
+  <NavbarVue />
   <router-view></router-view>
 </template>
 
