@@ -5,12 +5,14 @@ import Vuejs from '../components/Vuejs.vue';
 const routes = [
     {path: '/', name: 'Vue', component: Vuejs},
     {path: '/laravel', name: 'Laravel', component: () => import('../components/Laravel.vue')},
-    {path: '/tailwind', name: 'Tailwind', component: () => import('../components/Tailwindcss.vue')}
+    {path: '/tailwind', name: 'Tailwind', component: () => import('../components/Tailwindcss.vue')},
+    {path: '/courses/:id', name: 'Courses', component: () => import('../components/Courses.vue')}
 ]
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    //linkActiveClass: 'bg-gray-600 text-gray-300 p-2'
 });
 
 export default router;
