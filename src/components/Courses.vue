@@ -1,22 +1,31 @@
 <template>
-  <h1>Course Name: {{ course.name }}</h1>
-  <router-link to="/courses/1">Course 1</router-link>
-  <router-link to="/courses/2">Course 2</router-link>
-  <router-link to="/courses/3">Course 3</router-link>
+  <div>
+    <h1 class="text-2xl text-green-700 p-8">
+      Course Name: <span class="text-red-500">{{ course.name }}</span>
+    </h1>
+    <router-link to="/courses/1" class="p-2 m-2 bg-green-300 rounded"
+      >Course 1</router-link
+    >
+    <router-link to="/courses/2" class="p-2 m-2 bg-green-300 rounded"
+      >Course 2</router-link
+    >
+    <router-link to="/courses/3" class="p-2 m-2 bg-green-300 rounded"
+      >Course 3</router-link
+    >
+  </div>
 </template>
 
 <script>
-import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
 
 export default {
-  setup() {
-    const route = useRoute();
+  props: ["cid"],
+  setup(props) {
     const course = ref();
 
     // fetch the user information when params change
     watch(
-      () => route.params.id,
+      () => props.cid,
       () => {
         getCourse();
       }
@@ -29,7 +38,7 @@ export default {
     ];
     function getCourse() {
       return (course.value = courses.find(
-        ({ id }) => id === parseInt(route.params.id)
+        ({ id }) => id === parseInt(props.cid)
       ));
     }
 

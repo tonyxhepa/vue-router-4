@@ -13,5 +13,10 @@
       active-class="p-2 rounded bg-indigo-500 text-indigo-200"
       >Tailwind</router-link
     >
+    <router-link
+      to="/courses/1"
+      active-class="p-2 rounded bg-red-500 text-gray-200"
+      >Courses</router-link
+    >
   </nav>
 </template>

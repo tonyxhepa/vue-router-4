@@ -6,7 +6,7 @@ const routes = [
     {path: '/', name: 'Vue', component: Vuejs},
     {path: '/laravel', name: 'Laravel', component: () => import('../components/Laravel.vue')},
     {path: '/tailwind', name: 'Tailwind', component: () => import('../components/Tailwindcss.vue')},
-    {path: '/courses/:id', name: 'Courses', component: () => import('../components/Courses.vue')}
+    {path: '/courses/:cid', name: 'Courses', component: () => import('../components/Courses.vue'), props:true}
 ]
 
 const router = createRouter({

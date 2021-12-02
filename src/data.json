@@ -1,0 +1,8 @@
+{
+    "courses": [
+        {"id": 1, "name": "Laravel"},
+        {"id": 2, "name": "Vuejs"},
+        {"id": 3,"name": "Tailwind"}
+    
+    ]
+}
